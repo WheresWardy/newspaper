@@ -197,7 +197,6 @@ class Article(object):
             video_extractor = self.get_video_extractor(self)
             self.set_movies(video_extractor.get_videos())
 
-            self.top_node = self.extractor.post_cleanup(self.top_node)
             text, article_html = output_formatter.get_formatted(self)
             self.set_article_html(article_html)
             self.set_text(text)
